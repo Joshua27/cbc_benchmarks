@@ -7,11 +7,14 @@ The constraints' paths are the same as their corresponding models' paths in ProB
 - download [prob_prolog source files](https://prob.hhu.de/w/index.php?title=Download#Sourcecode) (benchmarking not available in ProB's release)
 - build ProB CLI using `make`
 - download [ProB's public specification repository](https://github.com/hhu-stups/specifications)
-- place specification repository and this benchmark repository beside prob_prolog source folder
+- place specification repository `prob_examples` and this benchmark repository besides prob_prolog source folder
 - use `-bench_smt_bmc`, `-bench_smt_cbc_deadlock` or `-bench_smt_cbc_inv` CLI commands passing the path of a model corresponding to a constraint
+
+The benchmark results are stored in `results/` as CSV files.
 
 ## Example
 `probcli -bench_smt_cbc_deadlock 'public_examples/EventBPrologPackages/ProofDirected/benchmarks/earley_3_autoproof.eventb'`
+
 This call will automatically select the corresponding deadlock benchmark from `deadlock_checking/public_examples/EventBPrologPackages/ProofDirected/benchmarks/earley_3_autoproof_deadlock_freedom.eval`
 
 ## Benchmark Description
